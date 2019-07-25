@@ -6,25 +6,25 @@ client.on('ready', () => {
 
 
 const developers = ["448904550032736256"]
-const adminprefix = "!";
+const adminprefix = ".";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
-  if (message.content.startsWith(adminprefix + 'ply')) {
+  if (message.content.startsWith(adminprefix + 'العب')) {
     client.user.setGame(argresult);
       message.channel.send(`**Status You   ${argresult}**`)
   } else 
-  if (message.content.startsWith(adminprefix + 'wat')) {
+  if (message.content.startsWith(adminprefix + 'فيلم')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.send(`**Status You   ${argresult}**`)
   } else 
-  if (message.content.startsWith(adminprefix + 'lis')) {
+  if (message.content.startsWith(adminprefix + 'اغنيه')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`**Status You  ${argresult}**`)
   } else 
-  if (message.content.startsWith(adminprefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/M3roof");
+  if (message.content.startsWith(adminprefix + 'انا')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/SHADOW");
       message.channel.send(`**Status You ${argresult} **`)
 }
 });
