@@ -11,7 +11,7 @@ client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
-  if (message.content.startsWith(adminprefix + 'العب')) {
+  if (message.content.startsWith(adminprefix + 'play')) {
     client.user.setGame(argresult);
       message.channel.send(`**Status You   ${argresult}**`)
   } else 
